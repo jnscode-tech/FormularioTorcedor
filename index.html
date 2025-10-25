@@ -5,18 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Torcedor</title>
     <link rel="icon" href="image/bola.png">
+    <!-- item acime serve para colocar ícone no title -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <header>
-      <div class="logo">
-        <h1>Cadastro do Torcedor</h1>
-        <img src="image/bola.png" alt="bola">
-      </div>
-    </header> -->
-    <header>
+<header>
   <h1>Cadastro do Torcedor</h1>
-  <img src="image/bola.png" alt="bola">
+  <img src="image/bola.png" alt="bola">  <!-- logo da página - uma bola -->
 </header>
 
     <main>
@@ -24,6 +19,8 @@
         <h2>Informações do Torcedor</h2>
 
         <form action="#" method="post">
+
+        <!-- usei o fieldset por questão de estética, para ficar harmonioso. Legend é utilizado definir o que cada fieldset se refere -->
           <fieldset class="pessoais">
             <legend>Dados Pessoais</legend>
             <!-- Nome -->
@@ -33,9 +30,7 @@
               id="nameTorcedor"
               name="nameTorcedor"
               placeholder="Digite seu nome completo"
-              required
-            />
-
+              required/>
             <!-- CPF -->
             <label for="cpfTorcedor">CPF:</label>
             <input
@@ -46,7 +41,8 @@
               required
             />
           </fieldset>
-          <!-- Frequência -->
+
+          <!-- Fieldset para encapsular o radio que pergunta a frequencia de ida ao estádio -->
           <fieldset class="estadio">
             <legend>Com que frequência você vai ao estádio de futebol</legend>
 
@@ -71,10 +67,11 @@
             </div>
           </fieldset>
 
+          <!-- fieldset para saber se tem camisa e se é sócio torcedor -->
           <fieldset class="socioecamisa">
             <legend>Sócio e Camisa</legend>
 
-            <!-- Sócio e camisa -->
+            <!-- Sócio e camisa - utilizado o checkbox pois o usuário pode escolher mais de uma opção -->
             <div class="checkbox-socio">
               <label
                 ><input type="checkbox" id="socio" name="socio" value="Sim" />
@@ -87,7 +84,7 @@
             </div>
           </fieldset>
 
-          <!-- Time -->
+          <!-- utilizado o select pois é a melhor forma do usuário esscolher apenas uma opção -->
           <label for="timeTorcedor" class="timecor"
             >Qual é o seu time do coração (Série A do Brasileirão):</label>
           <select id="timeTorcedor" name="timeTorcedor" required>
@@ -111,8 +108,8 @@
             <option value="vitoria">Vitória</option>
           </select>
 
-          <!-- Botões -->
-
+          <!-- Utilizado uma div para encapsular os Botões, não foi utilizado classe para o botão enviar pois não vi 
+           necessidade de formatá-lo como o botão o btn limpar -->
             <div class="buttons">
                <button type="submit">Enviar</button>
                <button type="reset" class="btnLimpar">Limpar</button>
@@ -120,7 +117,10 @@
         </form>
       </div>
     </main>
+    <!-- footer para colocar meu nome e o github no rodapé da página -->
+    <footer>Criado por Juliana N. Santos
+        <p>Github: https://github.com/jnscode-tech/FormularioTorcedor.git </p>
 
-    <footer>Criado por Juliana N. Santos</footer>
+    </footer>
   </body>
 </html>

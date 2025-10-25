@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   position: relative; /* necessário */
-  overflow: hidden; /* evita rolagem indesejada */
+  overflow: hidden; /*evita rolagem indesejada*/
 }
 
 header {
@@ -25,10 +25,10 @@ header {
 
 .logo{
   display: flex;
-  align-items: center;     /* título e imagem na mesma linha */
+  align-items: center; /* título e imagem na mesma linha */
 }
 img{
-    width: 60px;
+    width: 60px; /* tamanho da imagem */
 }
 
 .logo h1 {
@@ -37,7 +37,6 @@ img{
     text-align: center;
 
 }
-
 /*  O uso do body:: before permite manter o texto e elementos totalmente visíveis 
 e alterar a opacidade apenas da imagem de fundo sem atingir totalmente o body */
 body::before {
@@ -124,7 +123,7 @@ legend{
 
 }
 button{
-    background-color: #0f2214;
+    background-color: #4f7125;
     color: white;
     font-size: 20px;
     border: none;
@@ -137,16 +136,17 @@ button{
     display: block; /* necessário para margin:auto funcionar */
 
 }
+button:hover{
+     background-color:  #0f2214;;
+}
 
 .btnLimpar {
-  
   background-color: #9b0f0f;
 }
 .btnLimpar:hover {
   background-color: #cd1919;
 }
-
-  footer {
+footer {
     background-color: #4d7f24;
     color: white;
     text-align: center;
