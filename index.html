@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Torcedor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1> Cadastro de Torcedor </h1>
+            <form action="#" method="post">
+                <label for="nameTorcedor"> Digite seu nome: </label>
+                <input type="text" id="nameTorcedor" name="nameTorcedor" placeholder="Digite seu nome completo:" required>
+
+                <label for="cpf"> CPF: </label>
+                <input type="text" id="cpfTorcedor" name="cpfTorcedor" placeholder="000.000.000-00" required>
+
+                   <!-- time do coração -->
+             <label for="time">Qual é o seu time do coração: (Time da série A do Brasileirão): </label>
+             <select id="timeTorcedor" name="timeTorcedor" required>
+                 <option value="">Selecione seu time</option>    
+                 <option value="atletico">Atlético-MG </option>
+                 <option value="atletico">Bahia </option>   
+                 <option value="atletico">Botafogo </option>  
+                 <option value="atletico">Ceará </option>   
+                 <option value="atletico">Corinthians</option>   
+                 <option value="atletico">Flamengo </option>   
+                 <option value="atletico">Atlético-MG </option>   
+                 <option value="atletico">Atlético-MG </option>   
+                
+             </select>
+
+             <legend>Você é sócio-torcedor?</legend>
+
+             <!-- DIV  para resposta sim do sócio-torcedor-->
+             <div class="sim">
+               <input type="radio" id="sim" name="socio_torcedor" value="sim" />
+               <label for="sim">Sim</label>
+             </div>
+         
+             <div class="não">
+               <input type="radio" id="nao" name="socio_torcedor" value="nao" />
+               <label for="nao">Não</label>
+             </div>
+             
+
+
+
+            </form>
+
+            
+        </div>
+    </main>
+    
+</body>
+</html>
