@@ -3,92 +3,154 @@
     padding: 0;
     box-sizing: border-box;
   }
-
-
+  
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #14320f, #434a42);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative; /* necessário */
+  overflow: hidden; /* evita rolagem indesejada */
 }
- 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
+
+header {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 20px;
+  color: white;
 }
- 
-.container {
-    background-color: white;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+
+.logo{
+  display: flex;
+  align-items: center;     /* título e imagem na mesma linha */
 }
- 
-h1 {
-    text-align: center;
-    color: #333;
+img{
+    width: 60px;
 }
- 
-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
- 
-input[type="text"],
-select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.radio-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;  
-    margin-top: 8px;
-}
- 
-.radio-group input[type="radio"] {
-    margin-right: 5px;
-}
- 
-.radio-group label {
-    margin-right: 10px;
-    font-weight: normal;
-    cursor: pointer;
-}
- 
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
- 
-button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
+
+.logo h1 {
     color: white;
-    cursor: pointer;
-}
- 
-button:hover {
-    background-color: #0056b3;
-}
- 
-footer {
+    margin-top: 0;
     text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
-    background-color: #e9e9e9;
-    color: #555;
+
 }
- 
- 
+
+/*  O uso do body:: before permite manter o texto e elementos totalmente visíveis 
+e alterar a opacidade apenas da imagem de fundo sem atingir totalmente o body */
+body::before {
+  /* Content: ""  cria um conteúdo “vazio”, permitindo que o pseudo-elemento exista visualmente
+  no navegador. Sem essa linha, o ::before ou ::after nem aparece na tela. */
+  content: ""; 
+  position: absolute;
+  inset: 0; /* cobre toda a tela */
+  background-image: url('image/fundo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.67; /* aqui você define a transparência */
+  z-index: -1; /* mantém a imagem atrás do conteúdo */
+}
+  
+  main {
+    flex: 1; /* ocupa o espaço disponível */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    background-color: #fffdff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    width: 70%;
+    max-width: 600px;
+    height:auto;
+    margin-top: 2px;
+  }
+  
+  .container h2 {
+    text-align: center;
+    color: #0f2214;
+    font-size: 28px;
+    margin-bottom: 4px;
+    margin-top: 3px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #585757;
+  }
+
+  fieldset {
+  margin-bottom: 22px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+}
+.radio-group,
+.checkbox-socio {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+  input[type="text"], 
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 19px;
+    transition: 0.3s;
+  }
+legend{
+     font-size: 16px;
+     font-weight: bold;
+     color: #0f2214;
+}
+.timecor{
+    font-size: 16px;
+     font-weight: bold;
+     color: #0f2214;
+
+}
+button{
+    background-color: #0f2214;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    width: 60%;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 5px auto; /* centraliza horizontalmente */
+    display: block; /* necessário para margin:auto funcionar */
+
+}
+
+.btnLimpar {
+  
+  background-color: #9b0f0f;
+}
+.btnLimpar:hover {
+  background-color: #cd1919;
+}
+
+  footer {
+    background-color: #4d7f24;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    width: 100%;
+  }

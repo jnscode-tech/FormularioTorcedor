@@ -1,88 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário Torcedor</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torcedor</title>
+    <link rel="icon" href="image/bola.png">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <header>
+      <div class="logo">
+        <h1>Cadastro do Torcedor</h1>
+        <img src="image/bola.png" alt="bola">
+      </div>
+    </header> -->
+    <header>
+  <h1>Cadastro do Torcedor</h1>
+  <img src="image/bola.png" alt="bola">
+</header>
+
     <main>
-        <header>
+      <div class="container">
+        <h2>Informações do Torcedor</h2>
 
-        </header>
+        <form action="#" method="post">
+          <fieldset class="pessoais">
+            <legend>Dados Pessoais</legend>
+            <!-- Nome -->
+            <label for="nameTorcedor"> Nome: </label>
+            <input
+              type="text"
+              id="nameTorcedor"
+              name="nameTorcedor"
+              placeholder="Digite seu nome completo"
+              required
+            />
 
-        <div class="container">
-            <h1> Dados de Torcedor </h1>
-            <form action="#" method="post">
-                <label for="nameTorcedor"> Digite seu nome: </label>
-                <input type="text" id="nameTorcedor" name="nameTorcedor" placeholder="Digite seu nome completo:" required>
-
-                <label for="cpf"> CPF: </label>
-                <input type="text" id="cpfTorcedor" name="cpfTorcedor" placeholder="000.000.000-00" required>
-
-                <!-- quantas vezes -->
+            <!-- CPF -->
+            <label for="cpfTorcedor">CPF:</label>
+            <input
+              type="text"
+              id="cpfTorcedor"
+              name="cpfTorcedor"
+              placeholder="000.000.000-00"
+              required
+            />
+          </fieldset>
+          <!-- Frequência -->
+          <fieldset class="estadio">
+            <legend>Com que frequência você vai ao estádio de futebol</legend>
 
             <div class="radio-group">
-                <label for="qtd"> Qual a frequência de comparecimento no estádio </label>
-                <input type="radio" id="raramente" name="raramente" value="raramente">
-                <label for="raramente">Raramente</label>
-                <input type="radio" id="muitopouco" name="qt" value="muitopouco">
-                <label for="radio">Muito pouco </label>
-                <input type="radio" id="frequentemente" name="frequentemente" value="frequentemente">
-                <label for="raramente">frequentemente</label>
+              <label
+                ><input
+                  type="radio"
+                  name="frequencia"
+                  value="Raramente"
+                  required
+                />
+                Raramente</label
+              >
+              <label
+                ><input type="radio" name="frequencia" value="Muito pouco" />
+                Frequentemente</label
+              >
+              <label
+                ><input type="radio" name="frequencia" value="Frequentemente" />
+                Nunca </label
+              >
             </div>
-              
+          </fieldset>
 
-            <!-- sócio torcedor   -->
-             <div class="checkbox-socio">
+          <fieldset class="socioecamisa">
+            <legend>Sócio e Camisa</legend>
 
-                <label for="socio"> Sou sócio torcedor </label>
-                <input type="checkbox" id="socio" name="socio" value="socio">
-                <label for="camisa">Possuo camisa</label>
-                <input type="checkbox" id="camisa" name="camisa" value="camisa">
-
-           
+            <!-- Sócio e camisa -->
+            <div class="checkbox-socio">
+              <label
+                ><input type="checkbox" id="socio" name="socio" value="Sim" />
+                Sou sócio torcedor</label
+              >
+              <label
+                ><input type="checkbox" id="camisa" name="camisa" value="Sim" />
+                Possuo camisa oficial do time</label
+              >
             </div>
+          </fieldset>
 
+          <!-- Time -->
+          <label for="timeTorcedor" class="timecor"
+            >Qual é o seu time do coração (Série A do Brasileirão):</label>
+          <select id="timeTorcedor" name="timeTorcedor" required>
+            <option value="">Selecione seu time</option>
+            <option value="atletico-mg">Atlético-MG</option>
+            <option value="bahia">Bahia</option>
+            <option value="botafogo">Botafogo</option>
+            <option value="ceara">Ceará</option>
+            <option value="corinthians">Corinthians</option>
+            <option value="flamengo">Flamengo</option>
+            <option value="fluminense">Fluminense</option>
+            <option value="fortaleza">Fortaleza</option>
+            <option value="internacional">Internacional</option>
+            <option value="juventude">Juventude</option>
+            <option value="palmeiras">Palmeiras</option>
+            <option value="bragantino">Red Bull Bragantino</option>
+            <option value="santos">Santos</option>
+            <option value="sao-paulo">São Paulo</option>
+            <option value="sport">Sport</option>
+            <option value="vasco">Vasco da Gama</option>
+            <option value="vitoria">Vitória</option>
+          </select>
 
-                <!-- time do coração -->
-             <label for="time">Qual é o seu time do coração: (Time da série A do Brasileirão): </label>
-             <select id="timeTorcedor" name="timeTorcedor" required>
-                 <option value="">Selecione seu time</option>    
-                 <option value="atletico">Atlético-MG </option>
-                 <option value="atletico">Bahia </option>   
-                 <option value="atletico">Botafogo </option>  
-                 <option value="atletico">Ceará </option>   
-                 <option value="atletico">Corinthians</option>   
-                 <option value="atletico">Flamengo </option>   
-                 <option value="atletico">Fluminense</option>   
-                 <option value="atletico">Fortaleza </option>   
-                 <option value="atletico">Internacional </option>   
-                 <option value="atletico">Juventude </option>   
-                 <option value="atletico">Palmeiras </option>   
-                 <option value="atletico">Red Bull Bragantino</option>   
-                 <option value="atletico">Santos </option>   
-                 <option value="atletico">São Paulo </option>   
-                 <option value="atletico">Sport</option>   
-                 <option value="atletico">Vasco da Gama</option>   
-                 <option value="atletico">Vitória</option>   
-             </select>
+          <!-- Botões -->
 
-        
-            </form>
-            <div class="btn_cadastrar">  
-                <button type="submit">Cadastrar</button><br><br>
+            <div class="buttons">
+               <button type="submit">Enviar</button>
+               <button type="reset" class="btnLimpar">Limpar</button>
             </div>
-
-            <div class="btn_limpar">  
-                <button type="reset">Limpar</button>
-            </div>
-            
-        </div>
+        </form>
+      </div>
     </main>
-    <footer>
-        Criado por Juliana N. Santos
-    </footer>
-</body>
+
+    <footer>Criado por Juliana N. Santos</footer>
+  </body>
 </html>
